@@ -61,6 +61,10 @@ app.controller('ktCtrl', function($scope, $http, $timeout, $anchorScroll, $windo
             .then(function (result) {
                 $scope.video_contents = result.data;
             });
+		document.addEventListener('backbutton', function () {
+            VideoPlayer.close();
+            $scope.deviceButton(27);
+        }, false);
     };
 	
 	$scope.notSorted = function(obj){
@@ -77,6 +81,11 @@ app.controller('ktCtrl', function($scope, $http, $timeout, $anchorScroll, $windo
 			$event.preventDefault();
 			keypressed(code);
         }
+    };
+	
+	$scope.deviceButton = function (code) {
+        keypressed(code);
+        $scope.$apply();
     };
 	
 	$scope.section_id = 0;
@@ -99,7 +108,7 @@ app.controller('ktCtrl', function($scope, $http, $timeout, $anchorScroll, $windo
 			} else if ($scope.episode_id = -1) {
 				$scope.episode_id = Object.keys($scope.episodes)[Object.keys($scope.episodes).length-1];
 			} else {
-				//video
+				VideoPlayer.play("https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_30mb.mp4");
 			}
 		}
 		else if (code==27) {

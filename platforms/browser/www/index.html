@@ -6,6 +6,16 @@
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript">
+        document.addEventListener("deviceready", function() {
+            angular.bootstrap(document, ['app']);
+            document.addEventListener('backbutton', function () {
+                event.preventDefault();
+            }, false);
+        }, false);
+    </script>
+
 	<title>gr8Flix</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
