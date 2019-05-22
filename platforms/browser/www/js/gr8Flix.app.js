@@ -105,7 +105,7 @@ app.controller('ktCtrl', function($scope, $http, $timeout, $anchorScroll, $windo
 						season_select(Object.keys(result.data.content)[length-1]);
 						$scope.episode_id = Object.keys($scope.episodes)[Object.keys($scope.episodes).length-1];
 					});
-			} else if ($scope.episode_id = -1) {
+			} else if ($scope.episode_id == -1) {
 				$scope.episode_id = Object.keys($scope.episodes)[Object.keys($scope.episodes).length-1];
 			} else {
 				VideoPlayer.play("https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_30mb.mp4");
