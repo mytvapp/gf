@@ -1,0 +1,314 @@
+@font-face {
+    font-family: "almoni";
+    src: url("fonts/almoni-neue-aaa-400.woff") format('woff');
+}
+
+@font-face {
+    font-family: "almoni-header";
+    src: url("fonts/almoni-neue-aaa-600.woff") format('woff');
+}
+
+@font-face {
+    font-family: "almoni-header2";
+    src: url("fonts/almoni-neue-aaa-800.woff") format('woff');
+}
+/*
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(256,256,256,0.15);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(256,256,256,0.1);
+	border-radius: 20px;
+}
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*min-width: 1100px;*/
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	font-family: almoni;
+	font-size: 28px;
+	color: white;
+	line-height: 1;
+	overflow: hidden;
+}
+
+.header1 {
+}
+
+.page-header {
+	position: relative;
+    background: #1f1f1f;
+	box-shadow: inset 0 -80px 70px -41px rgba(0,0,0,0.45);
+    font-family: almoni-header;
+    font-size: 28px;
+	height: 90px;
+}
+
+.header-logo {
+	position: absolute;
+	padding: 7px 15px;
+}
+
+.header-section {
+	position: absolute;
+	top: 40%;
+	right: 250px;
+	font-size: 35px;
+}
+
+.option {
+    margin-left: 20px;
+}
+
+.line {
+    border-style: none solid none none;
+    border-width: 2px;
+    border-color: #3d3d3d;
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+	color: white;
+}
+a:hover {
+    color: #26a0d5;
+}
+
+#promo {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIW2NkYGBIA+JZQAwGjFAaJpgGEwCJgwUxVAAAj6YE0UU5exoAAAAASUVORK5CYII=),linear-gradient(#2f2f2f, #1d1d1d);
+	box-shadow: inset 0 -80px 70px -41px rgba(0,0,0,0.45);
+}
+
+#jssor_1 {
+	position:relative;
+	margin: 0 auto;
+	top:0px;
+	left:0px;
+	width:1920px;
+	height:380px;
+	overflow:hidden;
+}
+
+#jslides_1 {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:1920px;
+	height:380px;
+	overflow:hidden;
+}
+
+.sections {
+	position: relative;
+}
+
+.section {
+	background-image: -webkit-radial-gradient(50% 15%, ellipse cover, #585858, #373637 70%);
+	padding: 20px 20px 15px 0px;
+	margin: auto;
+	font-size: 28px;
+}
+
+.section-line {
+	border-top: solid 2px #595959;
+}
+
+.slides-container {
+	position:relative;
+	top:0px;
+	right:0px;
+	width:1884px;
+	height:182px;
+}
+
+.selected-slide {
+	position: relative;
+	top: 5px;
+	right: -1px;
+	width: 255px;
+	height: 162px;
+	border: solid 5px white;
+	background-color: rgba(255,255,255,0.2);
+}
+.selected-seret {
+	width: 195px;
+	height: 290px;
+}
+
+.slides-section {
+	position:absolute;
+	top:5px;
+	left:4px;
+	width:1884px;
+	height:182px;
+}
+
+#info {
+	background: #1f1f1f;
+	height: 250px;
+}
+
+#footer {
+    background-image: -webkit-radial-gradient(50% 15%, ellipse cover, #585858, #373637 70%);
+    width:100%
+    height: 30px;
+}
+
+#copywrite {
+	font-size: 12px;
+    padding: 10px;
+    padding-top:8px;
+    color: white;
+    opacity: 0.5;
+}
+
+.black_screen {
+	position: fixed;
+	top: 0;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}	
+	
+.sidrainfo_page {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 650px;
+	height: 100%;
+	/*background-image: -webkit-radial-gradient(50% 15%, ellipse cover, #585858, #373637 100%);*/
+	/*background: rgba(0,0,0,0.9);*/
+	
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIW2NkYGBIA+JZQAwGjFAaJpgGEwCJgwUxVAAAj6YE0UU5exoAAAAASUVORK5CYII=),linear-gradient(#2f2f2f, #1d1d1d);
+	
+	
+	border-left: solid 2px white;
+	transition: all 0.3s;
+}
+
+.sidrainfo_page.ng-hide {
+    width: 0;
+}
+
+.sidrainfo_context {
+	font-size: 28px;
+	width: 90%;
+	margin: auto;
+	transition: all 1s;
+}
+
+.sidrainfo_context.ng-hide {
+	opacity: 0;
+}
+
+.sidrainfo_img {
+	margin-top: 35px;
+	width: 100%;
+}
+
+.sidrainfo_title {
+	margin-top: 10px;
+	font-size: 35px;
+	font-family: almoni-header;
+	
+}
+
+.sidrainfo_eng {
+	margin-top: 0px;
+	padding-bottom: 3px;
+	font-size: 22px;
+	font-family: almoni-header;
+	color: #a1a1a1;
+	border-bottom: solid 2px #414141
+}
+
+.sidrainfo_genre {
+	margin-top: 15px;
+	font-size: 20px;
+	color: #c2c2c2;
+}
+
+.sidrainfo_desc {
+	margin-top: 15px;
+	color: #c2c2c2;
+	font-size: 23px;
+	text-align: justify;
+}
+
+.sidrainfo_content {
+	margin-top: 30px;
+}
+
+.sidrainfo_seasons {
+	margin-top: 25px;
+	margin-right: 0px;
+	font-size: 22px;
+}
+
+.sidrainfo_season {
+	float: right;
+	margin: 0 5px;
+	margin-top: 12px;
+	padding: 6px 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	border-color: #c2c2c2;
+	width: 85.5px;
+	color: white;
+	text-align: center;
+	
+}
+
+.sidrainfo_season.select {
+    box-shadow: inset 0 -80px 70px -41px rgba(38,160,213,1);
+}
+
+.sidrainfo_season.select.move {
+	box-shadow: inset 0 -80px 70px -41px rgba(38,160,213,0.4);
+}
+
+.sidrainfo_episodes {
+	margin-top: 10px;
+	font-size: 22px;
+}
+
+.sidrainfo_episode {
+	float: right;
+	margin: 3px 8px;
+	padding: 6px 0px;
+	width: 39px;
+	color: white;
+	text-align: center;
+	
+}
+
+.sidrainfo_episode.select {
+    box-shadow: inset 0 -80px 70px -41px rgba(38,160,213,0.4);
+}
+
+.sidrainfo_hr {
+	float: right;
+	margin-top: 6px;
+	border-right: solid 1px #000;
+    border-left: solid 1px #3b3b3b;
+	width: 1px;
+	height: 28px;
+
+}

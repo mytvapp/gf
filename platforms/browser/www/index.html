@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>gr8Flix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+	<script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+	<script src="js/jssor.slider-27.1.0.min.js"></script>
+	<script src="js/dang-jssor.js"></script>
+	<script src="js/gr8Flix.app.js"></script>
+</head>
+<body ng-app="ktApp" ng-controller="ktCtrl" ng-init="init()" ng-style="{'zoom': zoomFactor+'%', 'font-size': zoomFactor+'%'}" ng-keydown="keydown($event)" bgcolor="black" dir="rtl">
+
+<div class="header1">
+	<div class="page-header">
+		<div id="section0" class="header-logo"><img height="75px" src="assets/gr8Flix.png" /></div>
+		<div class="header-section">
+			<a class="option" style="color: #26a0d5">ראשי</a><span class="line" />
+			<a class="option">סרטים</a><span class="line" />
+			<a class="option">סדרות</a><span class="line" />
+			<a class="option">ילדים ונוער</a><span class="line" />
+			<a class="option">תוכניות מערוצים</a><span class="line" />
+		</div>
+	</div>
+	<div id="promo">
+		<div id="jssor_1" dir="rtl">
+			<div id="jslides_1" data-u="slides">
+				<div><img data-u="image" src="assets/promo/1.jpg" /></div>
+				<div><img data-u="image" src="assets/promo/2.jpg" /></div>                                
+				<div><img data-u="image" src="assets/promo/3.jpg" /></div>                                
+			</div>
+		</div>
+		<script src="js/jssor.promo.js"></script>
+	</div>
+</div>
+
+<div class="sections">
+	<div style="margin-top:-120px;padding-top:120px" id="section{{index+1}}" ng-repeat="(index, info) in video_contents">
+		<div class="section">{{info.title}}
+			<div class="slides-container" ng-style="{'height': info.group=='sratim'?'310px':'182px'}" dir="rtl">
+				<div u="slides" class="slides-section" ng-style="{'height': info.group=='sratim'?'310px':'182px'}">
+					<div ng-repeat="file in info.files" enable-jssor jssor-options="info.group=='sratim'?sratimSectionOptions:sdarotSectionOptions" jssor-object="sldr.test[index+1]" jssor-trigger="{{$last}}">
+						<img u="image" data-src2="http://ikafe.tk/tg/images/{{info.group}}/{{file}}.jpg" />
+					</div>
+				</div>
+				<div ng-if="section_id==index+1" ng-class="{'selected-slide':true, 'selected-seret': info.group=='sratim'}"></div>
+			</div>
+		</div>
+		<div class="section-line"></div>
+	</div>
+</div>
+
+<div id="info"></div>
+<div id="footer" dir="ltr">
+	<div id="copywrite">Copyright © 2016 gr8Flix! Entertainment. All rights reserved</div>
+</div>
+<!--<div class="black_screen" ng-show="sidra_info_show"></div>-->
+<div class="sidrainfo_page" ng-include="'info.html'" ng-show="sidra_info_show"></div>
+</body>
+</html>

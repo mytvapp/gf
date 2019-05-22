@@ -1,0 +1,22 @@
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+</head>
+<div class="sidrainfo_context" ng-show="sidratxtinfo_show">
+	<img class="sidrainfo_img" ng-src="http://ikafe.tk/tg/images/{{video_content.imgpath}}" ng-show="sidratxtinfo_show" />
+	<div class="sidrainfo_text" ng-show="sidratxtinfo_show">
+		<div class="sidrainfo_title">{{video_content.title}}</div>
+		<div class="sidrainfo_eng">{{video_content.eng}}</div>
+		<div class="sidrainfo_desc">{{video_content.desc}}</div>
+		<!--<div class="sidrainfo_genre">{{video_content.genre}}</div>-->
+		<div class="sidrainfo_seasons" ng-repeat="season in notSorted(video_content.content)">
+			<div ng-class="{sidrainfo_season: true, select:season==season_id, move: episode_id==-1}">עונה {{season}}</div>
+		</div>
+		<div style="clear: both"></div>
+		<div class="sidrainfo_episodes" ng-repeat="episode in notSorted(episodes)">
+			<div ng-class="{sidrainfo_episode: true, select:episode==episode_id}">{{episode}}</div>
+			<div class="sidrainfo_hr"></div>
+		</div>
+	</div>
+<div>
